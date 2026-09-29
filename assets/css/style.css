@@ -579,6 +579,84 @@ a { color: inherit; }
 .post p { color: var(--text-soft); max-width: 60ch; }
 
 /* ==========================================
+   PRIVACY E TERMINI
+   Entrambe le lingue sono nel markup: si vede quella di <html lang>.
+   ========================================== */
+html:not([lang="en"]) .legal-lang[lang="en"],
+html[lang="en"] .legal-lang[lang="it"] { display: none; }
+
+.legal .legal-meta {
+    font-family: var(--sans);
+    font-size: var(--fs-small);
+    margin-top: 1rem;
+}
+
+.legal-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-family: var(--sans);
+    font-size: var(--fs-small);
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.legal section {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
+    scroll-margin-top: 2rem;
+}
+
+.legal h2 {
+    font-size: var(--fs-h3);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.legal h3 {
+    font-family: var(--sans);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.legal h4 {
+    font-size: var(--fs-body);
+    font-weight: 500;
+    font-style: italic;
+    margin: 1.75rem 0 0.5rem;
+}
+
+.legal section p,
+.legal section li {
+    color: var(--text-soft);
+    max-width: 65ch;
+}
+
+.legal section p + p { margin-top: 0.75rem; }
+
+.legal ul {
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.legal strong { color: var(--text); font-weight: 500; }
+
+.legal code {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+}
+
+.legal a { text-decoration-color: var(--amber); text-underline-offset: 0.2em; }
+
+.colophon a { color: inherit; }
+
+/* ==========================================
    MOVIMENTO RIDOTTO
    ========================================== */
 @media (prefers-reduced-motion: reduce) {
